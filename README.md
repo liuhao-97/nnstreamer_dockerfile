@@ -1,7 +1,11 @@
 # nnstreamer_dockerfile
+
 nnstreamer docker build on Jetson AGX Orin
 
-If you want to build from scratch
+A prebuild docker image is here. https://drive.google.com/file/d/1t_Ce-Vw7Fy6ueqwmUx_sxw5wpPMlMa4q/view?usp=drive_link
+
+
+If you want to build from scratch, use Docker_raw to build a simple image and then use the following command to install nnstreamer.
 
 ```
 apt update
