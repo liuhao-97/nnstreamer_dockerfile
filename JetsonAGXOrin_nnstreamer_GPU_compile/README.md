@@ -46,6 +46,9 @@ Cflags: -I${includedir} -I${includedir}/torch/csrc/api/include
 
 ## 3. modify meson.build
 
+git clone https://github.com/liuhao-97/nnstreamer.git
+cd nnstreamer
+
 ```
 project('nnstreamer', 'c', 'cpp',
   version: '2.4.1',
@@ -90,7 +93,7 @@ vim nnstreamer/ext/nnstreamer/extra/nnstreamer_python3_helper.cc
 ```
 # how to build nnstreamer
 # https://nnstreamer.github.io/getting-started-meson-build.html
-git clone https://github.com/liuhao-97/nnstreamer.git
+
 cd nnstreamer
 
 # meson build
