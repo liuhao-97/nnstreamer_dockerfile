@@ -4,18 +4,20 @@
 ## 1.  run docker and install the required package
 
 ```
-sudo docker run -it --rm -v /run/jtop.sock:/run/jtop.sock -v /home/agxorin1/lh:/root/lh --runtime nvidia --network host nvcr.io/nvidia/l4t-pytorch:r35.1.0-pth1.11-py3
+# --cap-add=NET_RAW --cap-add=NET_ADMIN gives the permission of using tshark in docker 
+sudo docker run -it --rm -v /run/jtop.sock:/run/jtop.sock -v /home/agxorin1/lh:/root/lh --cap-add=NET_RAW --cap-add=NET_ADMIN --runtime nvidia --network host nvcr.io/nvidia/l4t-pytorch:r35.1.0-pth1.11-py3
 
 apt update && apt-get update
 apt-get install sudo -y && apt install vim
 # install meson
-# sudo apt-get install python3 python3-pip 
+# sudo apt-get install python3 python3-pip
+# install meson 
 sudo apt-get install python3-setuptools python3-wheel ninja-build meson
 
-# pip3 install meson
 sudo apt-get install libglib2.0
 sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 
+sudo apt-get install tshark
 ```
 
 ## 2. edit the path and add pytorch.pc
@@ -175,7 +177,7 @@ docker commit c418a80ffb43 nns
 
 To resume the docker
 ```
-sudo docker run -it --rm -v /run/jtop.sock:/run/jtop.sock -v /home/agxorin1/lh:/root/lh --runtime nvidia --network host nns
+sudo docker run -it --rm -v /run/jtop.sock:/run/jtop.sock -v /home/agxorin1/lh:/root/lh --cap-add=NET_RAW --cap-add=NET_ADMIN --runtime nvidia --network host nns
 export LD_LIBRARY_PATH=/usr/local/lib/python3.8/dist-packages/torch/lib:$LD_LIBRARY_PATH
 export GST_PLUGIN_PATH=/usr/local/lib/aarch64-linux-gnu/gstreamer-1.0
 export LD_LIBRARY_PATH=/usr/local/lib/aarch64-linux-gnu:$LD_LIBRARY_PATH
