@@ -164,6 +164,25 @@ root@agxorin1:~/lh/nns/nnstreamer# ldd /usr/local/lib/aarch64-linux-gnu/nnstream
 ```
 
 
+
+# After docker commit, how to resume
+
+How to docker commit:
+```
+docker ps
+docker commit c418a80ffb43 nns
+```
+
+To resume the docker
+```
+sudo docker run -it --rm -v /run/jtop.sock:/run/jtop.sock -v /home/agxorin1/lh:/root/lh --runtime nvidia --network host nns
+export LD_LIBRARY_PATH=/usr/local/lib/python3.8/dist-packages/torch/lib:$LD_LIBRARY_PATH
+xport GST_PLUGIN_PATH=/usr/local/lib/aarch64-linux-gnu/gstreamer-1.0
+export LD_LIBRARY_PATH=/usr/local/lib/aarch64-linux-gnu:$LD_LIBRARY_PATH
+```
+
+
+
 ## P.S.
 ```
 # if gst-inspect-1.0 nnstreamer shows the error
