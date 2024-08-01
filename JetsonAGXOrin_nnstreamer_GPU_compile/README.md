@@ -177,7 +177,7 @@ To resume the docker
 ```
 sudo docker run -it --rm -v /run/jtop.sock:/run/jtop.sock -v /home/agxorin1/lh:/root/lh --runtime nvidia --network host nns
 export LD_LIBRARY_PATH=/usr/local/lib/python3.8/dist-packages/torch/lib:$LD_LIBRARY_PATH
-xport GST_PLUGIN_PATH=/usr/local/lib/aarch64-linux-gnu/gstreamer-1.0
+export GST_PLUGIN_PATH=/usr/local/lib/aarch64-linux-gnu/gstreamer-1.0
 export LD_LIBRARY_PATH=/usr/local/lib/aarch64-linux-gnu:$LD_LIBRARY_PATH
 ```
 
