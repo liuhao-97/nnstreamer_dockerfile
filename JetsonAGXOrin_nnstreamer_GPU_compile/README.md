@@ -11,7 +11,6 @@ apt update && apt-get update
 apt-get install sudo -y && apt install vim
 # install meson
 # sudo apt-get install python3 python3-pip
-# install meson 
 sudo apt-get install python3-setuptools python3-wheel ninja-build meson
 
 sudo apt-get install libglib2.0
