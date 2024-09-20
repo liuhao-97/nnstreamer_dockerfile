@@ -183,6 +183,17 @@ export LD_LIBRARY_PATH=/usr/local/lib/aarch64-linux-gnu:$LD_LIBRARY_PATH
 ```
 
 
+# Install custom plugin  
+
+https://github.com/liuhao-97/deepstream_nnstreamer/tree/main/subplugin  
+
+Install datareschedule on Jetson  
+https://github.com/liuhao-97/deepstream_nnstreamer/tree/main/subplugin/subplugin_c/datareschedule  
+
+
+Install splitaddhead.py fastrawdatagenerator.py on Jetson and host machine  
+https://github.com/liuhao-97/deepstream_nnstreamer/tree/main/subplugin/subplugin_py  
+
 
 ## P.S.
 ```
