@@ -1,5 +1,19 @@
 # How to compile nnstreamer with pytorch on Jetson AGX Orin
 
+## Before running experiment on Jetson, fix the cpu frequency and change the power mode
+
+https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNxSeriesAndJetsonAgxOrinSeries.html#kernel-space-power-saving-features  
+
+https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html  
+
+```
+# check the mode
+sudo /usr/sbin/nvpmodel -q
+# change the mode 
+sudo /usr/sbin/nvpmodel -m 0
+# fix the CPU frequency
+sudo jetson_clocks
+```
 
 ## 1.  run docker and install the required package
 
