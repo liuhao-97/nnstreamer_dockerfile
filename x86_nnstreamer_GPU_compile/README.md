@@ -126,7 +126,7 @@ add_project_link_arguments(['-Wl,--no-as-needed', '-ltorch_cuda'], language: 'cp
 
 
 <del>## 4.  modify nnstreamer_python3_helper.cc
-
+<del>
 ```
 vim nnstreamer/ext/nnstreamer/extra/nnstreamer_python3_helper.cc
 
