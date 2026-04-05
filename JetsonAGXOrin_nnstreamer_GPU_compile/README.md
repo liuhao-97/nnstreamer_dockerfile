@@ -9,6 +9,8 @@ https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformP
 ```
 # check the mode
 sudo /usr/sbin/nvpmodel -q
+# check available modes
+sudo nvpmodel -p --verbose
 # change the mode 
 sudo /usr/sbin/nvpmodel -m 0
 # fix the CPU frequency
